@@ -36,3 +36,15 @@ document.addEventListener('keydown', function (e) {
 console.log(document.documentElement);
 console.log(document.querySelectorAll('.section'));
 console.log('salom');
+
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+// message.textContent = 'Biz bu saytda cookie ishlatamiz';
+message.innerHTML = 'Biz bu saytda cookie ishlatamiz <button class="btn btn--close-cookie">Okay</button>';
+const header = document.querySelector('header');
+header.prepend(message)
+document.querySelector('.btn--close-cookie').addEventListener('click', function(){
+  message.remove()
+})
+
+console.log(document.documentElement);

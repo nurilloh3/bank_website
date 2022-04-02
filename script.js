@@ -10,7 +10,8 @@ const btnsOpenModalWindow = document.querySelectorAll(
   '.btn--show-modal-window'
 );
 
-const openModalWindow = function () {
+const openModalWindow = function (e) {
+  e.preventDefault()
   modalWindow.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
@@ -31,3 +32,7 @@ document.addEventListener('keydown', function (e) {
     closeModalWindow();
   }
 });
+
+console.log(document.documentElement);
+console.log(document.querySelectorAll('.section'));
+console.log('salom');
